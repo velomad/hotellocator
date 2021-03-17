@@ -123,7 +123,7 @@ const AppNavigator = props => {
                 headerShown: getHeaderTitle(route) === 'Home' ? false : true,
               })}
             />
-            <Stack.Screen
+            <Stack.Screen   
               name="RoomBook"
               component={RoomBook}
               options={{title: 'Book Room', headerTitleAlign: 'center'}}

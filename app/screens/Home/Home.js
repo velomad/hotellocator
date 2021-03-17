@@ -25,7 +25,7 @@ import RNAndroidLocationEnabler from 'react-native-android-location-enabler';
 // Actions
 // import {} from '../../store/action';
 
-const Home = ({navigation}) => {
+const Home = (props) => {
   const map = useRef();
   const carousel = useRef(null);
 
@@ -144,7 +144,7 @@ const Home = ({navigation}) => {
     <TouchableOpacity
       activeOpacity={0.5}
       style={styles.cardContainer}
-      onPress={() => console.log(item.id)}>
+      onPress={() => props.navigation.navigate('RoomBook', {itemId: item.id})}>
       <Image source={item.image} style={styles.cardImage} />
       <Text style={styles.hotelName}>{item.name}</Text>
       {item.rooms.map((el, index) => (
